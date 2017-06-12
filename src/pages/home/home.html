@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Ionic & MobileFirst Starter </h2>
+  <p>
+    Starter Code with Ionic Tabs and mfp plugin.
+  </p>
+  <p> See Docu and soucre at:
+    <a href="https://github.com/m67hoff/MFPStarterIonic">  github.com/m67hoff/MFPStarterIonic </a> 
+  </p>
+
+  <h3>MFPServer:</h3>
+  <p>{{mfpserverurl}}</p>
+
+  <p><button ion-button icon-left outline (click)="callMFP()"> <ion-icon name="ios-cloud-upload-outline"></ion-icon>Call MobileFirst</button></p>
+  <p>Response:
+    <br/>
+    <font color="red"><pre>{{result}}</pre></font>
+  </p>
+
+</ion-content>

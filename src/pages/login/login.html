@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h4>Sample Login Page</h4>
+  <ion-list>
+  	<ion-item>
+  		<ion-label floating>Username</ion-label>
+  		<ion-input type="text" [(ngModel)]="username" value="testuser"></ion-input>
+  	</ion-item>
+  	<ion-item>
+  		<ion-label floating>Password</ion-label>
+  		<ion-input type="password" [(ngModel)]="password" value="testpwd"></ion-input>
+  	</ion-item>
+  	<ion-item>
+  		<button ion-button (click)="login()">Login</button>
+  	</ion-item>
+    <p>Login Response:
+    <br/>
+    <font color="red"><pre>{{loginResult}}</pre></font>
+    <p>Scope Response:
+    <br/>
+    <font color="red"><pre>{{resultScope}}</pre></font>
+  </p>
+
+  </ion-list>
+</ion-content>

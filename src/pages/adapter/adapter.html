@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>MFP Adapters</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <h4>Hello World</h4>
+  Scope: unprotected
+  <button ion-button icon-left outline (click)="getUnprotected()"> <ion-icon name="ios-cloud-upload-outline"></ion-icon> MFPStarterIonicAdapter hello </button>
+  <p>Response:
+    <br/>
+    <font color="red"><pre>{{unprotected}}</pre></font>
+  </p>
+
+  <h4>Local Mock data</h4>
+  Scope: default
+  <button ion-button icon-left outline (click)="getData()"> <ion-icon name="ios-cloud-upload-outline"></ion-icon>MFPStarterIonicAdapter getData</button>
+  <p>Response:
+    <br/>
+    <font color="red"><pre>{{data}}</pre></font>
+  </p>
+
+  <h4>Call external Server jsontest.com </h4>
+  Scope: default
+  <button ion-button icon-left outline (click)="getJsonTest_rxjs()"> <ion-icon name="ios-cloud-upload-outline"></ion-icon> MFPStarterIonicAdapter getJasonTest</button>
+  <p>Response:
+    <br/>
+    <font color="red"><pre>{{jsonTest}}</pre></font>
+  </p>
+
+</ion-content>
