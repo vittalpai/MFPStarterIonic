@@ -60,11 +60,11 @@ export class AdapterPage {
 
     this.jsonTestResource.load_Promise()
       .then((response: any) => {
-        console.log('-->  jsonTestResource.load:   Success ', response);
+        console.log('-->  jsonTestResource.load_Promise:   Success ', response);
         this.jsonTest = JSON.stringify(response.responseJSON, null, 2);
       }, error => {
-        console.log('-->  jsonTestResource.load:  ERROR HTTP status', error.status);
-        console.log('-->  jsonTestResource.load:  ERROR ', error.responseText);
+        console.log('-->  jsonTestResource.load_Promise:  ERROR HTTP status', error.status);
+        console.log('-->  jsonTestResource.load_Promise:  ERROR ', error.responseText);
         this.jsonTest = 'ERROR!  status: ' + error.status + ' ' + error.responseText
       })
 
@@ -75,12 +75,12 @@ export class AdapterPage {
 
     this.jsonTestResource.load_rxjs()
       .subscribe(response => {
-        console.log('-->  jsonTestResource.load.subscribe:  Success ', response);
+        console.log('-->  jsonTestResource.load_rxjs.subscribe:  Success ', response);
         this.jsonTest = JSON.stringify(response.responseJSON, null, 2)
         this.ref.detectChanges();
       }, error => {
-        console.log('-->  jsonTestResource.load.subscribe:  ERROR HTTP status', error.status);
-        console.log('-->  jsonTestResource.load.subscribe:  ERROR ', error.responseText);
+        console.log('-->  jsonTestResource.load_rxjs.subscribe:  ERROR HTTP status', error.status);
+        console.log('-->  jsonTestResource.load_rxjs.subscribe:  ERROR ', error.responseText);
         this.jsonTest = 'ERROR!  status: ' + error.status + ' ' + error.responseText
         this.ref.detectChanges();
       })
