@@ -25,6 +25,7 @@
 
 	<procedure name="getJsonTest"/>
 	<procedure name="getData"/>
+	<procedure name="postData"/>
 	<procedure name="hello" secured="false"/>
 
 </mfp:adapter>
