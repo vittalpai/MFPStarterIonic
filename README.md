@@ -11,13 +11,11 @@ See [MobileFirst Developer Kit - Installation guide](https://mobilefirstplatform
 
 You need some basic [Ionic](http://ionicframework.com/docs/) knowlage and the ionic cli installed.
 
-Also Android Stuido (or Xcode on MAc) is needed for the device emulators
-
-At the moment MobileFirst suports cordova@6.5.0  (cordova V7 is planned)
+Also Android Stuido (or Xcode on Mac) is needed for the device emulators
 
 ```bash
 npm install -g ionic 
-npm install -g cordova@6.5.0
+npm install -g cordova
 ```
 
 clone the repository, cd into and run (the run commnand should also install the needed plugins):
@@ -34,6 +32,7 @@ ionic cordova run android -emulator
 ### Changelog
 
 - 20170612 - first public Version
+- 20170630 - update mfp / cordova 7 support
  
 
 
