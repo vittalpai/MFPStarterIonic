@@ -18,13 +18,25 @@ npm install -g ionic
 npm install -g cordova
 ```
 
-clone the repository, cd into and run (the run commnand should also install the needed plugins):
+clone the repository, cd into and run: 
+
+for android: 
 
 ```bash
 ionic cordova resources android
 ionic cordova platform add android@latest
 ionic cordova run android -emulator
 ```
+for ios: 
+
+```bash
+ionic cordova resources ios
+ionic cordova platform add ios
+ionic cordova run ios -emulator
+```
+
+(cordova run should auto install the needed cordova plugins )
+
 ### Todo
 
 - extend docu
@@ -33,6 +45,7 @@ ionic cordova run android -emulator
 
 - 20170612 - first public Version
 - 20170630 - update mfp / cordova 7 support
+- 20170703 - update to ionic 3.5 
  
 
 
