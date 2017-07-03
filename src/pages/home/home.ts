@@ -21,6 +21,12 @@ export class HomePage {
     console.log('--> HomePage constructor')
   }
 
+  ionViewDidLoad() {
+    // for the first root page WL may not has jet loaded 
+    // since we did not wait for MFPInitComplete() before display the root_page
+    // WL.Analytics.send();  
+  }
+
   callMFP() {
     WL.Analytics.log({ "func": 'callMFP' });
 

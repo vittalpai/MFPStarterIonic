@@ -23,6 +23,10 @@ export class LoginPage {
     console.log('--> LoginPage constructor')
   }
 
+  ionViewDidLoad() {
+    WL.Analytics.send();
+  }
+
   login() {
 
     // https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/authentication-and-security/user-authentication/javascript/

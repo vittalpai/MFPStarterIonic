@@ -26,6 +26,10 @@ export class AdapterPage {
   ) { 
     console.log('--> AdapterPage constructor')
   }
+   
+  ionViewDidLoad() {
+    WL.Analytics.send();
+  }
 
   getUnprotected() {
     WL.Analytics.log({ "func": 'getUnprotected' });

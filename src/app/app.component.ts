@@ -37,7 +37,10 @@ export class MFPStarterIonic {
   // MFP Init complete function / mfp plugin loaded
   MFPInitComplete() {
     console.log('--> MFPInitComplete function called')
-    WL.Logger.config({ level: 'DEBUG' })
+    WL.Logger.config({ level: 'DEBUG' }) // default app log level 
+    
+    WL.Logger.updateConfigFromServer(); // get Log level from app config on MFP Server 
+    WL.Logger.status().then(status => console.log('--> WL-logger status: ' , status ))
 
     this.authInit()  // register a ChallengeHandler callback for security check
 
