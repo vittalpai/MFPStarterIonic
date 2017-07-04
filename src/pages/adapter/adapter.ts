@@ -27,7 +27,7 @@ export class AdapterPage {
     console.log('--> AdapterPage constructor')
   }
    
-  ionViewDidLoad() {
+  ionViewWillLeave() {
     WL.Analytics.send();
   }
 

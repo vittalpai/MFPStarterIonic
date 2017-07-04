@@ -23,7 +23,7 @@ export class LoginPage {
     console.log('--> LoginPage constructor')
   }
 
-  ionViewDidLoad() {
+  ionViewWillLeave() {
     WL.Analytics.send();
   }
 
