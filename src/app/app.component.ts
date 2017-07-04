@@ -1,5 +1,5 @@
-import { Component, Renderer } from '@angular/core';
-import { Platform, AlertController } from 'ionic-angular';
+import { Component, Renderer, ViewChild } from '@angular/core';
+import { Platform, App, AlertController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -9,13 +9,15 @@ import { TabsPage } from '../pages/tabs/tabs';
   templateUrl: 'app.html'
 })
 export class MFPStarterIonic {
-  rootPage: any = TabsPage;
+  @ViewChild('rootNav') nav
+  rootPage: any = TabsPage
   private authHandler: any
 
   constructor(platform: Platform,
     statusBar: StatusBar,
     splashScreen: SplashScreen,
-    private renderer: Renderer,
+    public renderer: Renderer,
+    public appCtrl: App,
     public alertCtrl: AlertController
   ) {
 
@@ -28,8 +30,8 @@ export class MFPStarterIonic {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      statusBar.styleDefault();
-      splashScreen.hide();
+      statusBar.styleDefault()
+      splashScreen.hide()
     });
   }
 
@@ -38,9 +40,9 @@ export class MFPStarterIonic {
   MFPInitComplete() {
     console.log('--> MFPInitComplete function called')
     WL.Logger.config({ level: 'DEBUG' }) // default app log level 
-    
+
     WL.Logger.updateConfigFromServer(); // get Log level from app config on MFP Server 
-    WL.Logger.status().then(status => console.log('--> WL-logger status: ' , status ))
+    WL.Logger.status().then(status => console.log('--> WL-logger status: ', status))
 
     this.authInit()  // register a ChallengeHandler callback for security check
 
@@ -55,38 +57,64 @@ export class MFPStarterIonic {
     this.authHandler.handleChallenge = ((response: any) => {
       console.log('--> AuthHandler.handleChallenge called');
 
-      if (response.errorMsg) {
-        var msg = response.errorMsg + ' <br> Remaining attempts: ' + response.remainingAttempts;
-        console.log('--> AuthHandler.handleChallenge ERROR: ' + msg);
-      }
+      //  Choice for the User Auth  handleChallenge CB
 
-      let prompt = this.alertCtrl.create({
-        title: 'Login',
-        message: msg,
-        inputs: [
-          {
-            name: 'username',
-            placeholder: 'user'
-          },
-          {
-            name: 'password',
-            placeholder: 'pw',
-            type: 'password'
-          },
-        ],
-        buttons: [
-          {
-            text: 'Login',
-            handler: data => {
-              console.log('--> AuthHandler.handleChallenge try Login for', data.username);
-              this.authHandler.submitChallengeAnswer(data);
-            }
-          }
-        ]
-      });
-      prompt.present();
+      // 1) use LoginPage 
+      this.displayLoginPageChallenge(response)
 
+      // 2) use Prompt Alert 
+      // this.displayLoginPromptAlert(response)
     })
+  }
+
+  displayLoginPageChallenge(response) {
+
+    if (response.errorMsg) {
+      var msg = response.errorMsg + ' - Remaining attempts: ' + response.remainingAttempts
+      console.log('--> displayLoginPageChallenge ERROR: ' + msg)
+    }
+    // get active View componet - to switch to this after challenge finishs
+    // not implemented right now 
+    let activeTabId = this.nav.getActiveChildNav().getSelected().id   // active Tab id
+    console.log('--> displayLoginPageChallenge  active tab: ', activeTabId )
+    let activeView = this.nav.getActive()  // this is the source page if not in a Tabs view
+    console.log('--> displayLoginPageChallenge  view: ', activeView )
+
+    this.nav.setRoot('LoginPage', { "authHandler": this.authHandler, "isChallenged": true, "msg": msg});
+  }
+
+  displayLoginPromptAlert(response) {
+
+    if (response.errorMsg) {
+      var msg = response.errorMsg + ' <br> Remaining attempts: ' + response.remainingAttempts;
+      console.log('--> displayLoginPromptAlert ERROR: ' + msg);
+    }
+
+    let prompt = this.alertCtrl.create({
+      title: 'Login',
+      message: msg,
+      inputs: [
+        {
+          name: 'username',
+          placeholder: 'user'
+        },
+        {
+          name: 'password',
+          placeholder: 'pw',
+          type: 'password'
+        },
+      ],
+      buttons: [
+        {
+          text: 'Login',
+          handler: data => {
+            console.log('--> AuthHandler.handleChallenge try Login for', data.username);
+            this.authHandler.submitChallengeAnswer(data);
+          }
+        }
+      ]
+    });
+    prompt.present();
   }
 
 }

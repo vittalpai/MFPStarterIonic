@@ -46,6 +46,7 @@ ionic cordova run ios -emulator
 - 20170612 - first public Version
 - 20170630 - update mfp / cordova 7 support
 - 20170703 - update to ionic 3.5 
+- 20170704 - extended login choice to set LoginPage as auth callback challange  
  
 
 
