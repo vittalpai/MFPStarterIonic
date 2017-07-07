@@ -9,9 +9,6 @@ before_install:
   - npm i -g ionic cordova
 install:
   - npm i
-  - mkdir www 
   - cordova prepare 
-  - ionic login mhoff@web.de $IONICPW
-  - ionic cordova resources 
 script:
   - ionic cordova build android

@@ -26,8 +26,8 @@ platforms/
 plugins/
 plugins/android.json
 plugins/ios.json
-www/
-resources/*/
+www/*
+!www/.gitkeep
 
 $RECYCLE.BIN/
 
