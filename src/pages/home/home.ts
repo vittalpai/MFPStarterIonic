@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
 import { AccessTokenProvider } from '../../providers/access-token/access-token';
 
@@ -15,7 +15,6 @@ export class HomePage {
 
   constructor(
     public navCtrl: NavController,
-    private ref: ChangeDetectorRef,
     private accessToken: AccessTokenProvider
   ) { 
     console.log('--> HomePage constructor')

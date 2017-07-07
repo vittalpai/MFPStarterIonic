@@ -16,7 +16,7 @@ export class MFPStarterIonic {
   constructor(platform: Platform,
     statusBar: StatusBar,
     splashScreen: SplashScreen,
-    public renderer: Renderer,
+    renderer: Renderer,
     public appCtrl: App,
     public alertCtrl: AlertController
   ) {
