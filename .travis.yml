@@ -7,9 +7,11 @@ before_install:
   - export LANG=en_US.UTF-8
   - nvm install 6
   - npm i -g ionic cordova
-script:  
-  - npm install
+install:
+  - npm i
+  - mkdir www 
+  - cordova prepare 
   - ionic login mhoff@web.de $IONICPW
-  - ionic cordova resources android
-  - ionic cordova platform add android
+  - ionic cordova resources 
+script:
   - ionic cordova build android
