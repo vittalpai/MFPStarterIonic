@@ -9,6 +9,6 @@ before_install:
   - npm i -g ionic cordova
 install:
   - npm i
-  - cordova prepare 
 script:
   - ionic cordova build android
+  - cordova build android
