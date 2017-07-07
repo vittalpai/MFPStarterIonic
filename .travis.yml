@@ -1,11 +1,8 @@
 language: android
 android:
-components:
-      - tools
-      - platform-tools
-      - tools
-      - build-tools-26.0.0
-      - android-25
+  components:
+    - build-tools-26.0.0
+    - android-23
 before_install:
   - export LANG=en_US.UTF-8
   - nvm install 6
