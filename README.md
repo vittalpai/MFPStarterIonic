@@ -14,28 +14,29 @@ You need some basic [Ionic](http://ionicframework.com/docs/) knowlage and the io
 Also Android Stuido (or Xcode on Mac) is needed for the device emulators
 
 ```bash
-npm install -g ionic 
-npm install -g cordova
+npm install -g ionic cordova
 ```
 
-clone the repository, cd into and run: 
-
-for android: 
+clone the repository, cd in gto the folder and run: 
 
 ```bash
-ionic cordova resources android
-ionic cordova platform add android@latest
-ionic cordova run android -emulator
+ionic cordova build android 
 ```
 for ios: 
 
 ```bash
-ionic cordova resources ios
-ionic cordova platform add ios
-ionic cordova run ios -emulator
+ionic cordova build ios 
 ```
 
-(cordova run should auto install the needed cordova plugins )
+cordova build/run automatical install the needed npm packages and cordova plugins.
+if you prefare to do this step by step use:
+
+```bash
+npm install #install npm modules 
+cordova prepare #install plugins in config.xml
+ionic cordova build <platform>
+```
+
 
 ### Todo
 
@@ -46,7 +47,8 @@ ionic cordova run ios -emulator
 - 20170612 - first public Version
 - 20170630 - update mfp / cordova 7 support
 - 20170703 - update to ionic 3.5 
-- 20170704 - extended login choice to set LoginPage as auth callback challange  
+- 20170704 - extended login choice to set LoginPage as auth callback challange
+- 20170707 - check-in resources (since generate needs an ionic login)   
  
 
 

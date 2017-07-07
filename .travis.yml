@@ -6,8 +6,8 @@ android:
     - tools
     - platform-tools
     - tools
-    - build-tools-26.0.0
-    - android-23
+    - build-tools-25.0.0
+    - android-25
   licenses:
     - android-sdk-preview-license-.+
     - android-sdk-license-.+
@@ -19,6 +19,7 @@ before_install:
   - npm i -g ionic cordova
 install:
   - npm i
+  - cordova prepare
 script:
   - ionic cordova build android
-  - cordova build android
+  
