@@ -62,5 +62,20 @@
             "ionic-plugin-keyboard": {},
             "cordova-plugin-mfp": {}
         }
+    },
+    "greenkeeper": {
+        "ignore": [
+            "@angular/common",
+            "@angular/compiler",
+            "@angular/compiler-cli",
+            "@angular/core",
+            "@angular/forms",
+            "@angular/http",
+            "@angular/platform-browser",
+            "@angular/platform-browser-dynamic",
+            "rxjs",
+            "@ionic/app-scripts",
+            "typescript"
+        ]
     }
 }

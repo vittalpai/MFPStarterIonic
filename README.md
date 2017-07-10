@@ -2,6 +2,8 @@ This is a starter template for [IBM MobleFirst](https://mobilefirstplatform.ibmc
 
 ## How to use this template
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/m67hoff/MFPStarterIonic.svg)](https://greenkeeper.io/)
+
 *You can run this mobile app without installing your own MobileFirst DevelomentKit/Server by using my demo-mfpserver on Bluemix (this may change in the future)*. **However is recommended to install your own server locally using the FREE MobileFirst Developer Kit**
 
 See [MobileFirst Developer Kit - Installation guide](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/installation-configuration/development/mobilefirst/)  
