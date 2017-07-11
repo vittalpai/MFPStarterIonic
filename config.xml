@@ -113,10 +113,9 @@
     </mfp:windows>
     <mfp:platformVersion>8.0.0.00-20170610-023331</mfp:platformVersion>
     <mfp:clientCustomInit enabled="false" />
-    <mfp:server runtime="mfp" url="http://192.168.178.28:9080" />
+    <mfp:server runtime="mfp" url="https://mfpf-mhoff-server.mybluemix.net:443" />
     <mfp:directUpdateAuthenticityPublicKey />
     <mfp:languagePreferences>en</mfp:languagePreferences>
-    <allow-navigation href="http://192.168.178.28:8100" />
     <engine name="android" spec="^6.2.3" />
     <engine name="ios" spec="^4.4.0" />
     <plugin name="cordova-plugin-console" spec="^1.0.7" />
