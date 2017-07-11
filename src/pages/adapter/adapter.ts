@@ -4,6 +4,7 @@ import { IonicPage, NavController } from 'ionic-angular';
 import { UnprotectedResourceProvider } from '../../providers/unprotected-resource-adapter/unprotected-resource-adapter';
 import { JsonTestProvider } from '../../providers/json-test/json-test';
 import { DataAdapterProvider } from '../../providers/data-adapter/data-adapter';
+import { PostProvider } from '../../providers/post/post';
 
 
 @IonicPage()
@@ -15,14 +16,19 @@ export class AdapterPage {
 
   unprotected: string;
   data: string;
+  pData: string;
   jsonTest: string;
+
+  p1: string
+  p2: string
 
   constructor(
     public navCtrl: NavController,
     private ref: ChangeDetectorRef,
     private unprotectedResource: UnprotectedResourceProvider,
     private jsonTestResource: JsonTestProvider,
-    private dataResource: DataAdapterProvider
+    private dataResource: DataAdapterProvider,
+    private postDataResource: PostProvider,
   ) { 
     console.log('--> AdapterPage constructor')
   }
@@ -59,6 +65,20 @@ export class AdapterPage {
       });
   }
 
+  postData(p1,p2) {
+    WL.Analytics.log({ "func": 'postData' });
+
+    this.postDataResource.load(p1,p2)
+      .subscribe( (response: any) => {
+        console.log('-->  postDataResource.load:   Success ', response);
+        this.pData = JSON.stringify(response.responseJSON, null, 2);
+      }, error => {
+        console.log('-->  postDataResource.load:  ERROR HTTP status', error.status);
+        console.log('-->  postDataResource.load:  ERROR ', error.responseText);
+        this.pData = 'ERROR!  status: ' + error.status + ' ' + error.responseText
+      });
+  }  
+  
   getJsonTest_Promise() {
     WL.Analytics.log({ "func": 'getJsonTest' });
 

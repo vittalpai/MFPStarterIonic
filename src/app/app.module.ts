@@ -12,6 +12,7 @@ import { AccessTokenProvider } from '../providers/access-token/access-token';
 import { UnprotectedResourceProvider } from '../providers/unprotected-resource-adapter/unprotected-resource-adapter';
 import { JsonTestProvider } from '../providers/json-test/json-test';
 import { DataAdapterProvider } from '../providers/data-adapter/data-adapter';
+import { PostProvider } from '../providers/post/post';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { DataAdapterProvider } from '../providers/data-adapter/data-adapter';
     AccessTokenProvider,
     UnprotectedResourceProvider,
     JsonTestProvider,
-    DataAdapterProvider
+    DataAdapterProvider,
+    PostProvider
   ]
 })
 export class AppModule { }

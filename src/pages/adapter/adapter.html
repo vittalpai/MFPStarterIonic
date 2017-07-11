@@ -5,13 +5,15 @@
 </ion-header>
 
 <ion-content padding>
-  
+
   <h4>Hello World</h4>
   Scope: unprotected
   <button ion-button icon-left outline (click)="getUnprotected()"> <ion-icon name="ios-cloud-upload-outline"></ion-icon> MFPStarterIonicAdapter hello </button>
   <p>Response:
     <br/>
-    <font color="red"><pre>{{unprotected}}</pre></font>
+    <font color="red">
+      <pre>{{unprotected}}</pre>
+    </font>
   </p>
 
   <h4>Local Mock data</h4>
@@ -19,7 +21,27 @@
   <button ion-button icon-left outline (click)="getData()"> <ion-icon name="ios-cloud-upload-outline"></ion-icon>MFPStarterIonicAdapter getData</button>
   <p>Response:
     <br/>
-    <font color="red"><pre>{{data}}</pre></font>
+    <font color="red">
+      <pre>{{data}}</pre>
+    </font>
+  </p>
+
+  <h4>Post Data</h4>
+  Scope: default
+  <ion-item>
+    <ion-label floating>Parameter 1</ion-label>
+    <ion-input type="text" [(ngModel)]="p1"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Parameter 2</ion-label>
+    <ion-input type="text" [(ngModel)]="p2"></ion-input>
+  </ion-item>
+  <button ion-button icon-left outline (click)="postData(p1 , p2)"> <ion-icon name="ios-cloud-upload-outline"></ion-icon>MFPStarterIonicAdapter postData</button>
+  <p>Response: (see also server logs)
+    <br/>
+    <font color="red">
+      <pre>{{pData}}</pre>
+    </font>
   </p>
 
   <h4>Call external Server jsontest.com </h4>
@@ -27,7 +49,9 @@
   <button ion-button icon-left outline (click)="getJsonTest_rxjs()"> <ion-icon name="ios-cloud-upload-outline"></ion-icon> MFPStarterIonicAdapter getJasonTest</button>
   <p>Response:
     <br/>
-    <font color="red"><pre>{{jsonTest}}</pre></font>
+    <font color="red">
+      <pre>{{jsonTest}}</pre>
+    </font>
   </p>
 
 </ion-content>

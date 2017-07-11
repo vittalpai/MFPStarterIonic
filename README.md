@@ -50,7 +50,8 @@ ionic cordova build <platform>
 - 20170630 - update mfp / cordova 7 support
 - 20170703 - update to ionic 3.5 
 - 20170704 - extended login choice to set LoginPage as auth callback challange
-- 20170707 - check-in resources (since generate needs an ionic login)   
+- 20170707 - check-in resources (since generate needs an ionic login) 
+- 20170711 - add POST data sample / add UserLogin adapter source 
  
 
 
