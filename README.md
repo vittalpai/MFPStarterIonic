@@ -3,6 +3,7 @@ This is a starter template for [IBM MobleFirst](https://mobilefirstplatform.ibmc
 ## How to use this template
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/m67hoff/MFPStarterIonic.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/m67hoff/MFPStarterIonic.svg?branch=master)](https://travis-ci.org/m67hoff/MFPStarterIonic)
 
 *You can run this mobile app without installing your own MobileFirst DevelomentKit/Server by using my demo-mfpserver on Bluemix (this may change in the future)*. **However is recommended to install your own server locally using the FREE MobileFirst Developer Kit**
 
@@ -53,5 +54,9 @@ ionic cordova build <platform>
 - 20170707 - check-in resources (since generate needs an ionic login) 
 - 20170711 - add POST data sample / add UserLogin adapter source 
  
-
+---
+#### Screenshot
+![](img/Home.jpg)
+![](img/Adapter.jpg)
+![](img/Login.jpg)
 
