@@ -5,14 +5,14 @@ This is a starter template for [IBM MobleFirst](https://mobilefirstplatform.ibmc
 [![Greenkeeper badge](https://badges.greenkeeper.io/m67hoff/MFPStarterIonic.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/m67hoff/MFPStarterIonic.svg?branch=master)](https://travis-ci.org/m67hoff/MFPStarterIonic)
 
-*You can run this mobile app without installing your own MobileFirst DevelomentKit/Server by using my demo-mfpserver on Bluemix (this may change in the future)*. **However is recommended to install your own server locally using the FREE MobileFirst Developer Kit**
+*You can run this mobile app without installing your own MobileFirst DevelomentKit/Server by using my demo-mfpserver on Bluemix (this may change in the future)*. **However, is recommended to install your own server locally using the FREE MobileFirst Developer Kit**
 
 See [MobileFirst Developer Kit - Installation guide](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/installation-configuration/development/mobilefirst/)  
 
 
 ### Prereq 
 
-You need some basic [Ionic](http://ionicframework.com/docs/) knowlage and the ionic cli installed.
+You need some basic [Ionic](http://ionicframework.com/docs/) knowledge and the ionic cli installed.
 
 Also Android Stuido (or Xcode on Mac) is needed for the device emulators
 
@@ -20,7 +20,7 @@ Also Android Stuido (or Xcode on Mac) is needed for the device emulators
 npm install -g ionic cordova
 ```
 
-clone the repository, cd in gto the folder and run: 
+clone the repository, cd into the folder and run: 
 
 ```bash
 ionic cordova build android 
@@ -31,8 +31,8 @@ for ios:
 ionic cordova build ios 
 ```
 
-cordova build/run automatical install the needed npm packages and cordova plugins.
-if you prefare to do this step by step use:
+cordova build/run automatically install the needed npm packages and cordova plugins.
+if you prefer to do this step by step use:
 
 ```bash
 npm install #install npm modules 
