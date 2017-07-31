@@ -53,6 +53,7 @@ ionic cordova build <platform>
 - 20170704 - extended login choice to set LoginPage as auth callback challange
 - 20170707 - check-in resources (since generate needs an ionic login) 
 - 20170711 - add POST data sample / add UserLogin adapter source 
+- 20170731 - update to ionic 3.6  (fix to minor version to get greenkeeper PR on change) 
  
 ---
 #### Screenshot
