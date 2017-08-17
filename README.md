@@ -49,12 +49,13 @@ ionic cordova build <platform>
 
 - 20170612 - first public Version
 - 20170630 - update mfp / cordova 7 support
-- 20170703 - update to ionic 3.5 
+- 20170703 - update to ionic-angular 3.5 
 - 20170704 - extended login choice to set LoginPage as auth callback challange
 - 20170707 - check-in resources (since generate needs an ionic login) 
 - 20170711 - add POST data sample / add UserLogin adapter source 
-- 20170731 - update to ionic 3.6  (fix to minor version to get greenkeeper PR on change)
+- 20170731 - update to ionic-angular 3.6  (fix to minor version to get greenkeeper PR on change)
 - 20170804 - dep update & app-scripts 
+- 20170816 - update ionic-cli 3.9.1 & mfp-plugin 8.0.2017072706   
  
 ---
 #### Screenshot
