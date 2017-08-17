@@ -3,7 +3,7 @@
     <name>MFPStarterIonic</name>
     <description>Ionic / MobileFirst Starter based on Ionic tabs sample</description>
     <author email="mhoff@de.ibm.com" href="https://mobilefirstplatform.ibmcloud.com/">IBM MobileFirst</author>
-    <content original-src="index.html" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
