@@ -57,6 +57,7 @@ ionic cordova build <platform>
 - 20170804 - dep update & app-scripts 
 - 20170816 - update ionic-cli 3.9.1 & mfp-plugin 8.0.2017072706   
 - 20170929 - update to ionic-angular 3.7 cordova-android 6.3 mfp-plugin 8.0.2017090705   
+- 20171130 - update to ionic-angular 3.9 cordova-android 6.4 mfp-plugin 8.0.2017112205   
  
 ---
 #### Screenshot
