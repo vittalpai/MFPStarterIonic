@@ -1,3 +1,5 @@
+:no_entry: Deprecated - Sorry: I no longer maintain this sample 
+
 This is a starter template for [IBM MobleFirst](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/cordova-tutorials/) and [Ionic (V3 typescript)](http://ionicframework.com/docs/) projects.
 
 ## How to use this template
