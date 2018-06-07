@@ -34,11 +34,9 @@ export class AdapterPage {
   }
    
   ionViewWillLeave() {
-    WL.Analytics.send();
   }
 
   getUnprotected() {
-    WL.Analytics.log({ "func": 'getUnprotected' });
 
     this.unprotectedResource.load()
       .then((response: any) => {
@@ -52,7 +50,6 @@ export class AdapterPage {
   }
 
   getData() {
-    WL.Analytics.log({ "func": 'getData' });
 
     this.dataResource.load()
       .then((response: any) => {
@@ -66,7 +63,6 @@ export class AdapterPage {
   }
 
   postData(p1,p2) {
-    WL.Analytics.log({ "func": 'postData' });
 
     this.postDataResource.load(p1,p2)
       .subscribe( (response: any) => {
@@ -80,7 +76,6 @@ export class AdapterPage {
   }  
   
   getJsonTest_Promise() {
-    WL.Analytics.log({ "func": 'getJsonTest' });
 
     this.jsonTestResource.load_Promise()
       .then((response: any) => {
@@ -95,7 +90,6 @@ export class AdapterPage {
   }
 
   getJsonTest_rxjs() {
-    WL.Analytics.log({ "func": 'getJsonTest' });
 
     this.jsonTestResource.load_rxjs()
       .subscribe(response => {

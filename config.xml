@@ -77,15 +77,15 @@
         <splash height="480" src="resources/ios/splash/Default~iphone.png" width="320" />
     </platform>
     <mfp:android>
-        <mfp:sdkChecksum>3308029348</mfp:sdkChecksum>
-        <mfp:appChecksum>0</mfp:appChecksum>
+        <mfp:sdkChecksum>4189346558</mfp:sdkChecksum>
+        <mfp:appChecksum>1235807693</mfp:appChecksum>
         <mfp:security>
             <mfp:testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3" />
         </mfp:security>
     </mfp:android>
     <mfp:ios>
-        <mfp:sdkChecksum>3490054449</mfp:sdkChecksum>
-        <mfp:appChecksum>0</mfp:appChecksum>
+        <mfp:sdkChecksum>2223817679</mfp:sdkChecksum>
+        <mfp:appChecksum>1613018933</mfp:appChecksum>
         <mfp:security>
             <mfp:testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3" />
         </mfp:security>
@@ -111,13 +111,17 @@
         </mfp:windows10>
         <mfp:appChecksum>0</mfp:appChecksum>
     </mfp:windows>
-    <mfp:platformVersion>8.0.0.00-20180405-080909</mfp:platformVersion>
+    <mfp:platformVersion>8.0.0.00-20180504-092633</mfp:platformVersion>
     <mfp:clientCustomInit enabled="false" />
-    <mfp:server runtime="mfp" url="http://192.168.1.36:9080" />
+    <mfp:server runtime="mfp" url="http://9.195.35.250:9080" />
     <mfp:directUpdateAuthenticityPublicKey />
     <mfp:languagePreferences>en</mfp:languagePreferences>
+    <allow-navigation href="http://9.199.159.47:8100" />
+    <allow-navigation href="http://10.101.126.51:8100" />
+    <allow-navigation href="http://9.77.122.164:8100" />
     <engine name="ios" spec="4.5.4" />
     <engine name="android" spec="6.4.0" />
+    <engine name="browser" spec="5.0.3" />
     <plugin name="cordova-plugin-device" spec="^1.1.7" />
     <plugin name="cordova-plugin-splashscreen" spec="^4.1.0" />
     <plugin name="cordova-plugin-statusbar" spec="^2.4.2" />

@@ -38,7 +38,7 @@ export class LoginPage {
   }
 
   ionViewWillLeave() {
-    WL.Analytics.send();
+  
   }
 
   login() {

@@ -16,8 +16,8 @@ function getData() {
 	MFP.Logger.warn('--> MFPStarterIonicAdapter getData')
 	
 	var mock = {
-		user: 'Michael Hoffmann',
-		email: 'mhoff@de.ibm.com',
+		user: 'MobileFirst User',
+		email: 'mfpuser@ibm.com',
 		product: 'IBM MobileFirst'
 	};
 	return mock;
