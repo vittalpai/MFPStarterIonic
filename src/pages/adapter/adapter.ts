@@ -65,7 +65,7 @@ export class AdapterPage {
   postData(p1,p2) {
 
     this.postDataResource.load(p1,p2)
-      .subscribe( (response: any) => {
+      .then( (response: any) => {
         console.log('-->  postDataResource.load:   Success ', response);
         this.pData = JSON.stringify(response.responseJSON, null, 2);
       }, error => {
@@ -80,7 +80,7 @@ export class AdapterPage {
     this.jsonTestResource.load_Promise()
       .then((response: any) => {
         console.log('-->  jsonTestResource.load_Promise:   Success ', response);
-        this.jsonTest = JSON.stringify(response.responseJSON, null, 2);
+        this.jsonTest = JSON.stringify(response, null, 2);
       }, error => {
         console.log('-->  jsonTestResource.load_Promise:  ERROR HTTP status', error.status);
         console.log('-->  jsonTestResource.load_Promise:  ERROR ', error.responseText);
